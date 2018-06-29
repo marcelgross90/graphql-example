@@ -13,8 +13,8 @@ INSERT INTO address_entity (id, street, house_nr, zip_code, city, user_id) VALUE
 INSERT INTO address_entity (id, street, house_nr, zip_code, city, user_id) VALUES
   (3, 'Hauptstr', '1', 80802, 'Dort', 2);
 
-INSERT INTO todo_entity (id, title, content) VALUES
-  (1, 'Todo 1', 'Learn about graphql');
+INSERT INTO book_entity (id, title, author) VALUES
+  (1, 'Learn about graphql', 'Ich halt');
 
-INSERT INTO todo_entity (id, title, content) VALUES
-  (2, 'Master Graphql', 'Be an expert');
+INSERT INTO book_entity (id, title, author) VALUES
+  (2, 'Master Graphql', 'Du auch');

@@ -1,0 +1,11 @@
+type Address {
+    id: Int!
+    street: String
+    houseNr: String
+    zipCode: Int
+    city: String
+}
+
+extend type Query {
+    addresses: [Address]
+}

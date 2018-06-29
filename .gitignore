@@ -32,5 +32,4 @@ hs_err_pid*
 .idea
 *.iml
 
-graphql.build/mysql/data
 .DS_Store

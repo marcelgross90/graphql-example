@@ -17,9 +17,9 @@ CREATE TABLE address_entity (
   FOREIGN KEY (user_id) REFERENCES user_entity (id)
 );
 
-CREATE TABLE todo_entity (
-  id            BIGINT NOT NULL AUTO_INCREMENT,
+CREATE TABLE book_entity (
+  id        BIGINT NOT NULL AUTO_INCREMENT,
   title     VARCHAR(255),
-  content      VARCHAR(255),
+  author    VARCHAR(255),
   PRIMARY KEY (id)
 )

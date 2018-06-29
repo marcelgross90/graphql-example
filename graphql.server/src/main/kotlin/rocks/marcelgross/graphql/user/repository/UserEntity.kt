@@ -12,7 +12,7 @@ data class UserEntity(
         val firstName: String?,
         val lastName: String?,
         val email: String?,
-        @OneToMany(fetch = FetchType.LAZY)
+        @OneToMany(fetch=FetchType.EAGER)
         @JoinColumn(name = "user_id")
         val addresses: MutableSet<AddressEntity>
 ) {
