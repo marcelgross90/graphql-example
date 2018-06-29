@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/graphql}
+    username: ${MYSQL_USER:admin}
+    password: ${MYSQL_PASSWORD:admin}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  http:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+logging:
+  level:
+    root: INFO
+    com.kurzdigital: DEBUG
+    # Request Info
+    com.kurzdigital.trawarn.RequestResponseLoggingFilter: DEBUG
+    # Debug all keycloak related http communication (huge!!!)
+    org.apache.http.wire: INFO
+    # Security log
+    org.springframework.security: INFO
+
+---
+spring:
+  profiles: test
+  datasource:
+    platform: all
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+    username: ca
+    password:
+  jpa:
+    database: h2
+    show-sql: true
