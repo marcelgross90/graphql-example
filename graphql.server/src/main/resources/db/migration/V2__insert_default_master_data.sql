@@ -1,20 +1,33 @@
-INSERT INTO user_entity (id, first_name, last_name, email) VALUES
-  (1, 'Max', 'Mustermann', 'max.mustermann@web.de');
+INSERT INTO person_entity (id, name) VALUES
+ ('qeii', 'Queen Elizabeth II');
 
-INSERT INTO user_entity (id, first_name, last_name, email) VALUES
-  (2, 'Heike', 'Musterfrau', 'heike.musterfrau@web.de');
+ INSERT INTO person_entity (id, name) VALUES
+ ('pp', 'Prince Philip');
 
-INSERT INTO address_entity (id, street, house_nr, zip_code, city, user_id) VALUES
-  (1, 'Schwabacherstr', '106', 90482, 'Fuerth', 1);
+ INSERT INTO person_entity (id, name) VALUES
+ ('pc', 'Prince Charles');
 
-INSERT INTO address_entity (id, street, house_nr, zip_code, city, user_id) VALUES
-  (2, 'Buergweg', '10A', 90482, 'Nuernberg', 1);
+ INSERT INTO person_entity (id, name) VALUES
+ ('pw', 'Prince William');
 
-INSERT INTO address_entity (id, street, house_nr, zip_code, city, user_id) VALUES
-  (3, 'Hauptstr', '1', 80802, 'Dort', 2);
+ INSERT INTO relationship_entity (id, from_id, to_id, relationship) VALUES
+  ('qps', 'qeii', 'pp', 'SPOUSE');
+
+ INSERT INTO relationship_entity (id, from_id, to_id, relationship) VALUES
+  ('pqs', 'pp', 'qeii', 'SPOUSE');
+
+ INSERT INTO relationship_entity (id, from_id, to_id, relationship) VALUES
+  ('qpp', 'qeii', 'pc', 'PARENTS');
+
+ INSERT INTO relationship_entity (id, from_id, to_id, relationship) VALUES
+  ('ppp', 'pp', 'pc', 'PARENTS');
+
+ INSERT INTO relationship_entity (id, from_id, to_id, relationship) VALUES
+  ('ppp1', 'pc', 'pw', 'PARENTS');
+
 
 INSERT INTO book_entity (id, title, author) VALUES
-  (1, 'Learn about graphql', 'Ich halt');
+  (1, 'Learn about graphql', 'Max Mustermann');
 
 INSERT INTO book_entity (id, title, author) VALUES
-  (2, 'Master Graphql', 'Du auch');
+  (2, 'Master Graphql', 'Hans Glück');

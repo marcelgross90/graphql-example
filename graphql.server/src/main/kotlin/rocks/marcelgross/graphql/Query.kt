@@ -1,4 +1,4 @@
-package rocks.marcelgross.graphql.test
+package rocks.marcelgross.graphql
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import org.springframework.stereotype.Component
