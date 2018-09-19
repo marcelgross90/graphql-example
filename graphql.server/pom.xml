@@ -16,7 +16,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <jackson.version>2.9.0</jackson.version>
-    <kotlin.version>1.2.41</kotlin.version>
+    <kotlin.version>1.2.70</kotlin.version>
     <hibernate.version>5.2.12.Final</hibernate.version>
     <greenmail.version>1.5.5</greenmail.version>
     <version.spring>4.3.10.RELEASE</version.spring>
@@ -166,6 +166,11 @@
           <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-maven-allopen</artifactId>
+            <version>${kotlin.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-maven-noarg</artifactId>
             <version>${kotlin.version}</version>
           </dependency>
         </dependencies>
